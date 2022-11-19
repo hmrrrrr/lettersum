@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <script src="wasm_exec.js"></script>
+    <title>title</title>
+    <link rel="stylesheet" href="style.css">
+    <script>
+        const go = new Go();
+        WebAssembly.instantiateStreaming(fetch("main.wasm"), go.importObject).then((result) => {go.run(result.instance)});
+    </script>
+</head>
+<body>
+    <h1>Convert String to Sum</h1>
+    <div class="center">
+        <textarea id="textinput" name="textinput" cols="80" rows="20"></textarea>
+        <input id="button" type="submit" name="button" value="Convert" onclick="cts(textinput.value)" class="button"/>
+        <textarea id="textoutput" name="textoutput" cols="80" rows="20" readonly="true"></textarea>
+    </div>
+    
+</body>
+<script>
+    var cts = function(input) {
+        var result = convertToSum(input)
+        if ((result != null)) {
+            console.log("Bruh",result)
+            textoutput.value = ""
+            alert("uh oh")
+        }
+    }
+</script>
+</html>
