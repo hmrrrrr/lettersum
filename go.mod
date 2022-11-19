@@ -1,3 +1,3 @@
-module github.com/hmrrrrr/wordnumbersum
+module github.com/hmrrrrr/lettersum
 
 go 1.19
