@@ -15,7 +15,7 @@ func getJsDoc() js.Value {
 
 func convertToSum(input string) (sum int32) {
 	for i := 0; i < len(input); i++ {
-		if (int32(input[i])-96 >= 0) && int32(input[i])-96 < 26 {
+		if (int32(input[i])-96 >= 0) && int32(input[i])-96 <= 26 {
 			sum += int32(input[i]) - 96
 		}
 	}
