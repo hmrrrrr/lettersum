@@ -6,7 +6,8 @@ import (
 )
 
 func main() {
-	if err := http.ListenAndServe("127.0.0.1:9090", http.FileServer(http.Dir("../../assets"))); err != nil {
+	http.Handle("/", http.FileServer(http.Dir("../../assets")))
+	if err := http.ListenAndServe("127.0.0.1:9090", nil); err != nil {
 		fmt.Println("server start failed")
 		return
 	}
