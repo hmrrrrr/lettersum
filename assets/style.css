@@ -7,7 +7,7 @@ h1 {
     font-family: Arial, Helvetica, sans-serif;
     color: white;
     text-align: center;
-    text-shadow: 1px 1px #555;
+    text-shadow: 1px 1px rgb(197, 197, 197);
 }
   
 textarea {
@@ -24,8 +24,8 @@ textarea {
   box-shadow: 0 9px #999;
 }
 .button {
-    background-color: #6bce6e; /* Green */
-    border: 5px solid #39ae3d;
+    background-color: #6bce6e;
+    border: 5px solid #1fa424;
     color: white;
     padding: 10px;
     width: 100%;
@@ -38,32 +38,34 @@ textarea {
     box-shadow: 0 9px #999;
     
 }
-.button:hover {background-color: #3e8e41}
+.button:hover {
+  background-color: #3e8e41
+}
 .button:active {
     background-color: #3e8e41;
     box-shadow: 0 5px #666;
     transform: translateY(4px);
 }
+
 ::-webkit-scrollbar {
     width: 12px;
   }
   
   /* Track */
   ::-webkit-scrollbar-track {
-    background: #f1f1f1;
+    background: #f1f1f17d;
     cursor: pointer;
   }
   
   /* Handle */
   ::-webkit-scrollbar-thumb {
-    background: #888;
-    border-radius: 5px;
+    background: rgb(152, 198, 159);
     cursor: pointer;
   }
   
   /* Handle on hover */
   ::-webkit-scrollbar-thumb:hover {
-    background: #555;
+    background: rgb(47, 72, 47);
   }
 
 .center {
